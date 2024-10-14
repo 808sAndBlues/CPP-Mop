@@ -3,6 +3,13 @@ use std::io::Write;
 
 use std::env;
 
+struct AstyleArgs
+{
+   file_types: Vec<String>,
+   style: String,
+   recursive: bool
+}
+
 fn main() {
     let args: Vec<String> = env::args().collect();
     let cmd_line_args: Vec<String> = extracted_args(&args, args.len());
